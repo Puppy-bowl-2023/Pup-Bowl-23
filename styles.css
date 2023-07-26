@@ -3,3 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.player-card {
+  flex-basis: 200px;
+  flex-grow: 1;
+  box-shadow: 0 0 12px red;
+  margin: 10px;
+  padding: 10px;
+}
