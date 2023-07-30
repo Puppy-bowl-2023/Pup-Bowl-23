@@ -1,13 +1,98 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-.player-card {
-  flex-basis: 200px;
-  flex-grow: 1;
-  box-shadow: 0 0 12px red;
-  margin: 10px;
-  padding: 10px;
+html {
+  font-size: 16px;
+}
+body {
+  padding: 1rem;
+}
+.card-container,
+.card {
+  display: flex;
+}
+.card-container {
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.card {
+  flex-direction: column;
+  width: 20rem;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0px 0px 18px -6px rgba(20, 20, 20, 0.8);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 30px -6px rgba(20, 20, 20, 0.8);
+}
+img {
+  max-width: 100%;
+}
+.status-tag {
+  color: white;
+  padding: 4px;
+  display: inline-block;
+  width: 3.125rem;
+  text-align: center;
+  margin: 5px 0;
+  border-radius: 2px;
+  text-transform: capitalize;
+}
+.status-tag.field {
+  background-color: green;
+}
+.status-tag.bench {
+  background-color: brown;
+}
+.details {
+  margin: 1rem 0;
+}
+.details ul {
+  margin: 0;
+  list-style: none;
+}
+.actions {
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+input[type="submit"],
+.actions button {
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"],
+.actions button:hover {
+  border: 1px solid rgba(150, 150, 150);
+}
+input[type="submit"],
+button.primary {
+  background: rgba(67, 115, 213);
+  color: white;
+  transition: all 0.3s ease;
+}
+input[type="submit"]:hover,
+button.primary:hover {
+  background: rgba(50, 50, 160);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 2rem 0;
+}
+form .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
